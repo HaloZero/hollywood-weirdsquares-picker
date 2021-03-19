@@ -1,0 +1,34 @@
+<head>
+	<style type="text/css" src="main.css"></style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+	<ul>
+		<li>1. After each game, remove any users who were picked</li>
+		<li>2. Tap add from waitlist</li>
+		<li>3. Shuffle the board.</li>
+		<li>Addendum: Removing the center requires special commands. Select someone from the waitlist and tap "Replace Center"</li>
+	</ul>
+
+	<h1>GameBoard</h1>
+	<div class='squares'>
+	</div>
+
+	<div id="controls">
+		<button id='remove'>Remove Selected</button>
+		<button id='add'>Add from Waitlist</button>
+		<button id="shuffle">Shuffle</button>
+	</div>
+	<br><br><br>
+
+	<h1>WaitList</h1>
+	<div>
+		<div class="waitlist"></div>
+
+		<br><br><br>
+
+		<button id="replace_center">Replace Center</button>
+	</div>
+</body>

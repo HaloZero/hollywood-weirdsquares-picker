@@ -1,0 +1,23 @@
+.container {
+		border: 1px solid black;
+		margin: 10px;
+		padding: 20px;
+}
+
+div .row {
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+.container.highlighted {
+	background: green;
+}
+
+input {
+	pointer-events: none;
+}
+
+button {
+	margin: 0 auto;
+	text-align: center;
+}
