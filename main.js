@@ -35,7 +35,7 @@ function buildWaitList(names) {
 
 	var currentCast = $.map($(".squares .cell"), function (cell, i) { return $(cell).val() })
 	let waitList = names.filter(x => !currentCast.includes(x));
-	var rowsToBuild = waitList.length / 4
+	var rowsToBuild = waitList.length / 3
 	var rows = []
 	for (var i = 0; i < rowsToBuild; i++) {
 		var newRow = $("<div>").addClass("row")
@@ -44,7 +44,7 @@ function buildWaitList(names) {
 	}
 
 	for (var i = 0; i < waitList.length; i++) {
-		var rowToModify = rows[parseInt(i / 4)]
+		var rowToModify = rows[parseInt(i / 3)]
 		var $input = $("<input>").addClass('cell').val(waitList[i])
 		var $container = $("<span>").addClass("container").append($input)
 		rowToModify.append($container)
