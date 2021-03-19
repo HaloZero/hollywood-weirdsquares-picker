@@ -15,6 +15,7 @@ div .row {
 
 input {
 	pointer-events: none;
+  border: 0;
 }
 
 button {
