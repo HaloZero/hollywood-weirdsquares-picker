@@ -71,6 +71,11 @@ $(function () {
 
 	$("#remove").on('click', function() {
 			var selectedCast = $.map($(".squares .highlighted .cell"), function (cell, i) { return $(cell).val() })
+			var currentCast = $.map($(".squares .cell"), function (cell, i) { return $(cell).val() })
+			if (selectedCast.includes(currentCast[4])) {
+				alert("You can only replace the center")
+				return
+			}
 			var currentWaitlist = $.map($(".waitlist .cell"), function (cell, i) { return $(cell).val() })
 			var newWaitList = currentWaitlist.concat(selectedCast)
 			$(".squares .highlighted").remove()
@@ -86,10 +91,8 @@ $(function () {
 			var currentWaitlist = $.map($(".waitlist .cell"), function (cell, i) { return $(cell).val() })
 			var numberToPull = 9 - currentCast.length
 			var newCast = currentCast.concat(currentWaitlist.splice(0,numberToPull))
-			$($(".waitlist .container").splice(0,numberToPull)).remove()
-
-
 			buildCast(newCast)
+			buildWaitList(currentWaitlist)
 	})
 
 	$("#shuffle").on('click', function() {
